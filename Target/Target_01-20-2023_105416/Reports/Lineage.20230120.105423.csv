@@ -1,0 +1,16 @@
+Relationship,Script,Target_Object_DB,Target_Object_Name,Source_Object_DB,Source_Object_Name,Action
+View,02-views.sql,PRODUCT_VIEWS,vtruncround,PRODUCT_VIEWS,vtargetmail,View
+BTEQ,05-macro-plus.sql,ORG_DEV,table_101,,,Delete
+View,02-views.sql,PRODUCT_VIEWS,INTERVAL_DATA_TYPE_V,PRODUCT_VIEWS,INTERVAL_DATA_TYPE,View
+View,02-views.sql,HR_VIEWS,PERIOD_OVERLAP_LDIFF,HR_VIEWS,EMPLOYEE_PERIOD,View
+View,02-views.sql,PRODUCT_VIEWS,INTERVAL_DATA,PRODUCT_VIEWS,INTERVAL_DATA_TYPE_V,View
+BTEQ,01-tables.sql,PRODUCT,TEMP_QUAL_TABLE,HR,DIMDATE,Create Table As Select
+BTEQ,01-tables.sql,PRODUCT,TEMP_QUAL_TABLE,SALES,FACTINTERNETSALES,Create Table As Select
+View,02-views.sql,PRODUCT_VIEWS,PERIOD_INTERVAL_BEGIN,SNOWCONVERT,PERSON_EMPLOYMENT_PERIOD,View
+View,02-views.sql,PRODUCT_VIEWS,PERIOD_INTERVAL_BEGIN,SNOWCONVERT,PERSON_LOGIN,View
+View,03-views-reorder-dependencies.sql,ORG_DEV,MY_VIEW_11,ORG_DEV,TABLE1,View
+View,03-views-reorder-dependencies.sql,ORG_DEV,MY_VIEW_12,ORG_DEV,TABLE099,View
+View,03-views-reorder-dependencies.sql,ORG_DEV,MY_VIEW_1,ORG_DEV,MY_VIEW_2,View
+View,03-views-reorder-dependencies.sql,ORG_DEV,MY_VIEW_2,ORG_DEV,MY_VIEW_3,View
+View,03-views-reorder-dependencies.sql,ORG_DEV,MY_VIEW_3,ORG_DEV,SOME_MISSING_OBJECT,View
+BTEQ,01-tables.sql,HR,EMPLOYEE_DUPE,HR,EMPLOYEE,Create Table As Select

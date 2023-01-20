@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+    <link href="https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/src/vuetify.min.css" rel="stylesheet">
+
+    <style>
+        /* Global properties */
+:root
+{
+    --sc-grey: #C7C7C7;
+    --sc-blue: #2196F3;
+    --sc-dark-blue: #0085CD;
+    --sc-light-blue: #77c1fd;
+    --sc-background-color: #FAFAFA;
+    --sc-font-color: #808080;
+    --sc-separator-color: #E4E4E4;
+    --sc-pink:#FF4081;
+    --sc-green: #81C784;
+    --sc-orange: #FFB74D;
+}
+
+/* Loading div */
+.loader {
+    border: 8px solid var(--sc-grey);
+    border-radius: 50%;
+    border-top: 8px solid var(--sc-dark-blue);
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 0.5s linear infinite; /* Safari */
+    animation: spin 0.5s linear infinite;
+    margin-left: 50%;
+    margin-top: 400px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* General */
+
+.common-margin {
+    margin: 8px;
+}
+
+.report
+{
+    background-color: var(--sc-background-color);
+    font-family:'Open Sans';
+    color: var(--sc-font-color);
+    font-size: 13px;
+    line-height: 0.2;    
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px var(--sc-grey);
+}
+
+.card-title
+{
+    line-height: 1;
+    border-bottom: var(--sc-separator-color);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 800;
+    text-align: center;
+    color: black;
+}
+
+.card-content
+{    
+    display: grid;
+    height: 75%;
+    margin-top: 15px;
+    margin-left: 80px;
+    margin-right: 80px; 
+}
+
+.card-footer 
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.link
+{
+    cursor: pointer;
+    color: var(--sc-dark-blue);
+    text-decoration: underline;
+    text-decoration-color: var(--sc-dark-blue);
+}
+
+h4
+{
+    font-weight:bolder;
+}
+
+#content
+{
+    height: auto;
+    min-width: 1200px;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.rectangle{
+    display: grid;
+    height: 59px;
+    width: 59px;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.summary-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.summary-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.summary-item {
+    display: grid;
+    grid-template-columns: 40% auto;
+    align-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+
+.summary-icons
+{
+    display: grid;
+    margin: auto;
+}
+
+.summary-icons > img
+{
+    margin: auto;
+}
+
+.summary-item-info
+{
+    display: grid;
+}
+
+.conversion-summary-title {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.15px;
+    margin-bottom: 8px;
+    line-height: 20px;
+}
+
+.action-items-summary-title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.15px;
+    margin-bottom: 12px;
+    line-height: 26px;
+}
+
+.action-items-summary-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    height: fit-content;
+    margin-left: -4%;
+    margin-top: auto;
+}
+
+li.action-item::marker {
+    font-size: x-small;
+}
+
+.action-item {
+
+}
+
+.summary-content 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 15px;
+    height: fit-content;
+}
+
+.summary-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.button
+{
+    cursor: pointer;
+    color: var(--sc-dark-blue); 
+    font-size: 12px;
+    font-weight: 650;
+    background-color: transparent;
+    border-radius: 5px;
+    border: var(--sc-dark-blue) 1px solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Header section */
+
+#header
+{
+    display: grid;
+    grid-template-columns: 75% 25%;    
+    height: 100px;
+    margin: 8px;
+}
+
+#logo > img
+{
+    float: right;
+}
+
+#summary {
+    display: grid;
+    height: auto;
+    padding: 32px;
+}
+
+#files-rectangle
+{
+    background-color: var(--sc-dark-blue);
+}
+
+#objects-rectangle
+{
+    background-color: var(--sc-light-blue);
+}
+
+#lines-rectangle
+{
+    background-color: var(--sc-pink);
+}
+
+#conversion-rectangle
+{
+    background-color:var(--sc-green);
+}
+
+.summary-item-value {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.summary-item-name {
+    text-align: left;
+    letter-spacing: 0.15px;
+    padding-right: 3px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 400;
+    font: 14px Open Sans;
+    line-height: 16px;
+}
+
+.conversion-summary-chart {
+    margin-top: 5%;
+}
+
+.conversion-summary-chart-title {
+    font-weight: 600;
+    line-height: 18px;
+}
+
+div.conversion-summary-chart > div > canvas {
+    width: 250px !important;
+    height: 45px !important;
+    margin-left: -6px;
+}
+
+
+/* Automation section */
+
+#automation
+{
+    display: grid;
+    grid-template-columns: 65% 35%;    
+    height: 350px;
+    text-align: center;
+    line-height: 1.25;
+}
+
+.steps-grid
+{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;    
+}
+
+#steps-content
+{
+    display: grid;
+    grid-template-rows: 60px 60px 90px 40px;
+}
+
+#steps-bar
+{
+    display: grid;
+    grid-template-columns: 36px 164px 36px 164px 36px;   
+    margin: auto;
+}
+
+#steps-description > p
+{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.circle
+{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border: var(--sc-green) 2px solid;
+    margin: auto;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 32px;
+}
+
+#first-step
+{    
+    background-color: var(--sc-green);
+    color: white;
+}
+
+#second-step
+{    
+    color: var(--sc-green);
+}
+
+#third-step
+{    
+    color: var(--sc-grey);
+    border-color: var(--sc-grey);
+}
+
+.line
+{
+    border-top-width: 2px;
+    border-top-style: solid;
+    margin-top: 17px;
+}
+
+#first-line
+{
+    border-color: var(--sc-green);
+}
+
+#second-line
+{
+    border-color: var(--sc-grey);
+}
+
+#saving-content
+{
+    display: grid;
+    grid-template-rows: 50px 80px 80px 40px;
+}
+
+#saving-content > div
+{
+    margin-bottom: 20px;
+}
+
+#manual-rectangle
+{
+    background-color: var(--sc-light-blue);
+}
+
+#action-rectangle
+{
+    background-color: var(--sc-orange);
+}
+
+.saving-item
+{
+    font-weight: 700;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Conversion section */
+
+#conversion-chart
+{
+    height: auto;
+}
+
+/* Objects inventory section */
+
+.object-table-title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 2%;
+}
+
+.object-table-header {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px !important;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF !important;
+    background: #0078C2;
+    height: 72px !important;
+}
+
+.object-table {
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 2%;
+}
+
+.object-table-row {
+    height: 50px;
+}
+
+.dark-row {
+    background: #EBF5FB;
+}
+
+.light-row {
+    background: #F6F9FB
+}
+
+.object-name-column {
+    font-weight: 600 !important;
+    width: 15%;
+}
+
+.total-object-quantity-column {
+    width: 12% !important;
+}
+
+.object-table-chart-cell {
+}
+
+.object-table-cell {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px !important;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 0.15px;
+    width: 10%;
+}
+
+.object-table-description {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 2%;
+}
+
+.object-file-level-breakdown {
+    display: grid;
+}
+
+.object-file-level-breakdown-content {
+    margin: 2%;
+}
+
+.object-conversion-summary-chart {
+    height: 30px;
+    margin-top: 5%;
+}
+
+.object-table-disclaimer {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 1%;
+}
+
+.object-breakdown-disclaimer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    height: fit-content;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    margin-left: -2%;
+    margin-bottom: 3%;
+}
+
+.v-data-table > .v-data-table__wrapper > table {
+    border-spacing: 2px !important;
+}
+
+.theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:not(:last-child) > td:last-child, .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:not(:last-child) > td:not(.v-data-table__mobile-row), .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:not(:last-child) > th:last-child, .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:not(:last-child) > th:not(.v-data-table__mobile-row), .theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr:last-child > th {
+    border-bottom: none !important;
+}
+
+.object-file-level-breakdown-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.file-breakdown-title {
+    margin-left: 6px;
+    margin-bottom: 2%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.file-breakdown-subtitle {
+    margin-left: 6px;
+    margin-bottom: 2%;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.file-breakdown-content {
+    display: grid;
+}
+
+.file-breakdown-separator {
+    border-top: var(--sc-grey) 1px;
+    width: 98%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.file-summary-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.file-summary-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.file-breakdown-chart {
+
+}
+
+.file-breakdown-disclaimer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    height: fit-content;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: auto;
+    text-align: left;
+    margin-left: 13%;
+    margin-right: 13%;
+}
+
+div.object-conversion-summary-chart > div {
+    width: 220px !important;
+    height: 31px !important;
+    margin-left: 5%;
+}
+
+div.file-breakdown-chart > div > canvas {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+div.file-breakdown-chart > div {
+    overflow: auto;
+}
+
+/* Issues breakdown section */
+
+#issues-breakdown
+{
+    display: grid;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 32px;
+}
+
+.issues-breakdown-title 
+{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.issues-breakdown-grid-2 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    column-gap: 5%;
+}
+
+.error-categorization {
+    display: grid;
+    height: auto;
+    flex-direction: column;
+}
+
+.error-categorization-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.error-categorization-types {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: var(--sc-grey) 1px solid;
+    border-top: var(--sc-grey) 1px solid;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    column-gap: 2%;
+}
+
+.error-type 
+{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.error-type-content {
+    display: grid;
+    margin-left: 2%;
+}
+
+.error-type-bullet {
+    width: 24px;
+    border-radius: 2px;
+}
+
+.error-type-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.error-type-explanation {
+    margin-top: auto;
+    margin-bottom: auto;
+    font: 14px Open Sans;
+}
+
+.issues-summary {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 50% 50%;
+    column-gap: 5%;
+    margin: 8px;
+}
+
+.issues-number {
+    display: grid;
+}
+
+.issues-number-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 4%;
+}
+
+.issues-number-content {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.issue-count {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10%;
+}
+
+.issue-count-bullet {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.issue-count-column {
+    grid-template-columns: auto auto;
+    display: inline-flex
+}
+
+#actions-distribution {
+    width: 80%;
+    padding-bottom: 24px;
+    height: fit-content;
+}
+
+#top-actions-content
+{
+    grid-template-rows: 100px 30px auto;
+    margin-left: 30px;
+    margin-right: 30px;    
+}
+
+#top-actions-explanation 
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 50px;
+}
+
+#explanation-text {
+    font: 14px Open Sans;
+}
+
+.issues-column
+{
+    margin: 8px;
+}
+
+.issues-grid 
+{
+    display: grid;
+    grid-template-columns: 22% 68% 10%;
+    align-items: center;
+}
+
+.issues-grid-item {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font: 14px Open Sans;
+}
+
+.issue-description-column {
+    display: grid;
+    grid-template-columns: 5px auto;
+}
+
+.issue-description 
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+}
+
+.issues-explanation-section
+{
+    display: grid;
+    margin-left: 2%;
+}
+
+.issues-explanation-title 
+{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 1%;
+}
+
+.issue-separator
+{
+    border-top: var(--sc-grey) 1px solid;
+}
+
+.issue-bullet {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.high-issue {
+    background-color: #F57C00;
+}
+
+.medium-issue {
+    background-color: #FFB74D;
+}
+
+.critical-issue {
+    background-color: #F44336;
+}
+
+.low-issue {
+    background-color: #FFFFB2;
+}
+
+#action-distribution-content
+{
+    display: grid;
+    grid-template-rows: auto;
+    height: auto;    
+}
+
+#action-distribution-content > div 
+{
+   display: grid;   
+}
+
+#distribution-chart > canvas
+{   
+   margin-left: auto;
+   margin-right: auto;
+   width: 180px !important;
+   height: 180px !important;
+}
+
+#labels 
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 150px;
+}
+
+.label > div
+{
+    display: grid;
+    grid-template-columns: 20px auto;
+    margin-bottom: 5px;
+}
+
+.bullet-point
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+}
+
+.label-text 
+{
+    margin-left: 5px;
+    margin-bottom: auto;
+    margin-top: auto;
+    font: 13px Open Sans;
+}
+
+.issues-breakdown-footer {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+.slide-0
+{
+    background-color: var(--sc-light-blue);
+}
+
+.slide-1
+{
+    background-color: var(--sc-dark-blue);
+}
+
+.slide-2
+{
+    background-color: var(--sc-blue);
+}
+
+.slide-3
+{
+    background-color: var(--sc-grey);
+}
+
+#no-items-content
+{
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Footer section */
+
+#footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 60px;
+    margin: auto;
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#footer-text {
+    text-align: justify;
+    margin: auto;
+    margin-left: 5%;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#reports-button {
+    margin: auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#reports-button-container {
+    display: grid;
+}
+
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body class="report">
+    <div id="app">
+        <div class="loader" id="loader"></div>
+        <div id="content" hidden>
+            <!-- Header section -->
+            <header-component v-bind:runid="migrationData.Components.Header.Items[2].ItemValue"
+                              v-bind:date="migrationData.Components.Header.Items[3].ItemValue"
+                              v-bind:scversion="migrationData.Components.Header.Items[0].ItemValue"
+                              v-bind:language="migrationData.SourceLanguage"></header-component>
+
+            <!-- Summary section of main conversion information  -->
+            <summary-component v-bind:enablescripting="migrationData.IsScriptingEnabled"
+                               v-bind:language="migrationData.SourceLanguage"
+                               v-bind:summarysection="migrationData.Components.Summary.Properties">
+
+            </summary-component>
+
+            <!-- Conversion of top level objects and files section -->
+            <file-object-breakdown v-bind:language="migrationData.SourceLanguage"
+                                   v-bind:enablescripting="migrationData.IsScriptingEnabled"
+                                   v-bind:sqlfilebreakdown="migrationData.Components.SqlFileBreakdown"
+                                   v-bind:sqlobjectbreakdown="migrationData.Components.SqlObjectBreakdown"
+                                   v-bind:scriptfilebreakdown="migrationData.Components.ScriptFileBreakdown"
+                                   v-bind:scriptobjectbreakdown="migrationData.Components.ScriptObjectBreakdown">
+            </file-object-breakdown>
+
+            <!-- Action items section -->
+            <div v-if="FillTopActionItemDistributionInventories()">
+                <issues-breakdown-component v-bind:issuesbreakdown="migrationData.Components.IssuesBreakdown"
+                                            v-bind:issuesdistribution="migrationData.Components.IssuesDistribution"
+                                            v-bind:slug="migrationData.LanguageSlug" />
+
+            </div>
+            <div v-else>
+                <top-no-action-items-component></top-no-action-items-component>
+            </div>
+
+            <!-- Footer containing support contact -->
+            <footer-component></footer-component>
+        </div>
+    </div>
+    <script src="https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/src/vue.js"></script>
+    <script src="https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/src/vuetify.js"></script>
+    <script src="https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/src/chart.js"></script>
+    <script src="https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/src/chartjs-plugin-datalabels.min.js"></script>
+    <script src="https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/src/vue-chartjs.min.js"></script>
+    <script type="text/javascript">
+        // HTML report data
+var json = {"LanguageSlug":"for-teradata","IsScriptingEnabled":true,"SourceLanguage":"Teradata","Components":{"Header":{"Items":[{"ItemName":"CoreVersion","ItemValue":"13.0.83","ItemKey":""},{"ItemName":"AppVersion","ItemValue":"Not Provided","ItemKey":""},{"ItemName":"RunId","ItemValue":"20230120.105423","ItemKey":""},{"ItemName":"Date","ItemValue":"2023/01/20","ItemKey":""}]},"Summary":{"Properties":{"TotalFiles":{"ItemName":"Total Files","ItemValue":"6","ItemKey":"files"},"TotalLinesOfCode":{"ItemName":"Lines Of Code","ItemValue":"1017","ItemKey":"lines"},"ConversionSpeed":{"ItemName":"Conversion speed","ItemValue":"144","ItemKey":"conversion_speed"},"ElapsedTime":{"ItemName":"Assessment speed","ItemValue":"00:00:07 lines/sec","ItemKey":"assessment_speed"},"TotalConversionErrors":{"ItemName":"Total Conversion Errors","ItemValue":"0","ItemKey":""},"TotalParsingErrors":{"ItemName":"Total Parsing Errors","ItemValue":"0","ItemKey":""},"TotalWarnings":{"ItemName":"Total Warnings","ItemValue":"131","ItemKey":""},"TotalFilesNotGenerated":{"ItemName":"Total Files Not Generated","ItemValue":"0","ItemKey":""},"SqlConversionRate":{"ItemName":"LOC Conversion Rate","ItemValue":"99.7","ItemKey":""},"SqlPartialConversionRate":{"ItemName":"","ItemValue":"0.29999999999999716","ItemKey":""},"SqlUnrecognizedElementsLOC":{"ItemName":"Unrecognized Lines of Code","ItemValue":"0","ItemKey":""},"SqlLinesCount":{"ItemName":"Lines of Code","ItemValue":"987","ItemKey":""},"ScriptIdentifiedObjects":{"ItemName":"Identified Objects","ItemValue":"1","ItemKey":""},"ScriptLocConversionRate":{"ItemName":"LOC Conversion Rate","ItemValue":"100","ItemKey":""},"ScriptPartialLocConversionRate":{"ItemName":"","ItemValue":"0","ItemKey":""},"ScriptUnrecognizedElements":{"ItemName":"Unrecognized Elements","ItemValue":"0","ItemKey":""},"TotalIdentifiedObjects":{"ItemName":"Identified Objects","ItemValue":"62","ItemKey":""},"UnrecognizedElements":{"ItemName":"Unrecognized Elements","ItemValue":"0","ItemKey":""},"ObjectConversionRate":{"ItemName":"Object Conversion Rate","ItemValue":"98.39","ItemKey":""},"ObjectPartialConversionRate":{"ItemName":"","ItemValue":"1.6099999999999994","ItemKey":""}}},"IssuesBreakdown":{"Properties":{"LowIssues":{"ItemName":"","ItemValue":"128","ItemKey":"low-issue"},"MediumIssues":{"ItemName":"","ItemValue":"3","ItemKey":"medium-issue"},"HighIssues":{"ItemName":"","ItemValue":"0","ItemKey":"high-issue"},"CriticalIssues":{"ItemName":"","ItemValue":"0","ItemKey":"critical-issue"},"LowUniqueIssues":{"ItemName":"","ItemValue":"13","ItemKey":"low-issue"},"MediumUniqueIssues":{"ItemName":"","ItemValue":"1","ItemKey":"medium-issue"},"HighUniqueIssues":{"ItemName":"","ItemValue":"0","ItemKey":"high-issue"},"CriticalUniqueIssues":{"ItemName":"","ItemValue":"0","ItemKey":"critical-issue"}},"Items":[{"Name":"MSCEWI1021","Recommendation":"Syntax not supported","DistributionPercentage":100,"DocumentationUrl":"https://docs.mobilize.net/snowconvert/general/issues/mscewi1021","CssClass":"medium-issue","Severity":"Medium","Instances":3}]},"IssuesDistribution":{"Items":[{"Name":"MSCEWI1021","Recommendation":"Syntax not supported","DistributionPercentage":100,"DocumentationUrl":"https://docs.mobilize.net/snowconvert/general/issues/mscewi1021","CssClass":"medium-issue","Severity":"Medium","Instances":3},{"Name":"","Recommendation":"Other action items","DistributionPercentage":0,"DocumentationUrl":"","CssClass":"-issue","Severity":"","Instances":0}]},"SqlFileBreakdown":{"FileType":{"ItemName":"File","ItemValue":"SQL","ItemKey":"file"},"Properties":{"SqlFileCount":{"ItemName":"Total Files","ItemValue":"5","ItemKey":"files"},"SqlLinesCount":{"ItemName":"Total Lines of Code","ItemValue":"987","ItemKey":"lines"},"SqlTotalParsingErrors":{"ItemName":"Parsing Errors","ItemValue":"0","ItemKey":"parsing_errors"},"SqlTotalConversionErrors":{"ItemName":"Conversion Errors","ItemValue":"0","ItemKey":"conversion_errors"},"SqlFilesConversionRate":{"ItemName":"Files Generated","ItemValue":"100","ItemKey":""},"SqlFilesNotGeneratedPercentage":{"ItemName":"","ItemValue":"0","ItemKey":""},"SqlIdentifiedObjects":{"ItemName":"Total Object Quantity","ItemValue":"61","ItemKey":"object_quantity"},"SqlConversionRate":{"ItemName":"LOC","ItemValue":"99.7","ItemKey":""},"SqlPartialConversionRate":{"ItemName":"","ItemValue":"0.3","ItemKey":"object_quantity"}}},"ScriptFileBreakdown":{"FileType":{"ItemName":"File","ItemValue":"SCRIPT","ItemKey":"file"},"DetailedScriptSummaries":[{"Name":"Bteq","ObjectNotConvertedPercentage":"0","ObjectConversionRate":"100","ConversionRate":"100","NotConvertedPercentage":"0","Quantity":"1","LinesOfCode":"30","ParsingErrors":"0","ConversionErrors":"0"},{"Name":"Fload","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"},{"Name":"Mload","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"},{"Name":"TPT","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"},{"Name":"TPump","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"}],"Properties":{"ScriptFileCount":{"ItemName":"Total Files","ItemValue":"1","ItemKey":"files"},"ScriptTotalLoc":{"ItemName":"Total Lines of Code","ItemValue":"30","ItemKey":"lines"},"ScriptTotalParsingErrors":{"ItemName":"Parsing Errors","ItemValue":"0","ItemKey":"parsing_errors"},"ScriptTotalConversionErrors":{"ItemName":"Conversion Errors","ItemValue":"0","ItemKey":"conversion_errors"},"ScriptFilesConversionRate":{"ItemName":"Files Generated","ItemValue":"100","ItemKey":""},"ScriptFilesNotGeneratedPercentage":{"ItemName":"","ItemValue":"0","ItemKey":""},"ScriptLocConversionRate":{"ItemName":"LOC","ItemValue":"100","ItemKey":""},"ScriptPartialLocConversionRate":{"ItemName":"","ItemValue":"0","ItemKey":"object_quantity"}}},"SqlObjectBreakdown":{"Items":[{"Name":"Tables","ObjectNotConvertedPercentage":"0","ObjectConversionRate":"100","ConversionRate":"100","NotConvertedPercentage":"0","Quantity":"40","LinesOfCode":"654","ParsingErrors":"0","ConversionErrors":"0"},{"Name":"Views","ObjectNotConvertedPercentage":"0","ObjectConversionRate":"100","ConversionRate":"100","NotConvertedPercentage":"0","Quantity":"12","LinesOfCode":"123","ParsingErrors":"0","ConversionErrors":"0"},{"Name":"Join Indexes","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"},{"Name":"Macros","ObjectNotConvertedPercentage":"0","ObjectConversionRate":"100","ConversionRate":"100","NotConvertedPercentage":"0","Quantity":"2","LinesOfCode":"16","ParsingErrors":"0","ConversionErrors":"0"},{"Name":"Procedures","ObjectNotConvertedPercentage":"14.29","ObjectConversionRate":"85.71","ConversionRate":"100","NotConvertedPercentage":"0","Quantity":"7","LinesOfCode":"190","ParsingErrors":"0","ConversionErrors":"0"},{"Name":"Functions","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"}],"ConversionRateHeader":"LOC Conversion Rate"},"ScriptObjectBreakdown":{"Items":[{"Name":"Tables","ObjectNotConvertedPercentage":"0","ObjectConversionRate":"100","ConversionRate":"100","NotConvertedPercentage":"0","Quantity":"1","LinesOfCode":"10","ParsingErrors":"0","ConversionErrors":"0"},{"Name":"Views","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"},{"Name":"Join Indexes","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"},{"Name":"Macros","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"},{"Name":"Procedures","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"},{"Name":"Functions","ObjectNotConvertedPercentage":"—","ObjectConversionRate":"—","ConversionRate":"—","NotConvertedPercentage":"—","Quantity":"—","LinesOfCode":"—","ParsingErrors":"—","ConversionErrors":"—"}],"ConversionRateHeader":"LOC Conversion Rate"}}};
+
+// Links dictionary
+var links = 
+{
+    default: 'https://www.mobilize.net/services/database-migrations/snowflake/get-info',
+    guide: 'https://docs.mobilize.net/snowconvert/general/reports/html-report',
+    forum: 'https://forums.mobilize.net/forum/23-snowconvert/',
+    support: 'mailto:support@mobilize.net',
+    reportsDocumentation: 'https://docs.mobilize.net/snowconvert/general/reports'
+};
+
+// Register chart data labels plugin to all charts
+Chart.register(ChartDataLabels);
+
+/* CONVERSION CHART*/
+
+// Formats the datalabels for the conversion chart
+function CustomFormatter(value, context) {
+    var value = context.dataset.data[context.dataIndex];
+    return value != 0 ? value + "%" : "";
+}
+
+// Data Labels style
+labels = {
+   title: {
+      font: {
+        size: 12,
+        family: 'Open Sans'
+      }
+   },
+}
+
+/* TOP ACTION ITEMS DISTRIBUTION CHART */
+
+// Top action items distribution Chart inventories
+var actionItemsData = [];
+var distributionColors = [ '#77c1fd', '#0085CD', '#2196F3', '#C7C7C7' ];
+
+// Uses the JSON to fill the top action items distribution inventories
+function FillTopActionItemDistributionInventories() {
+    for (let i = 0; i < json.Components.IssuesDistribution.Items.length; i++)
+   {
+        if (json.Components.IssuesDistribution.Items[i].DistributionPercentage > 0)
+      {
+            actionItemsData[i] = json.Components.IssuesDistribution.Items[i].DistributionPercentage;
+      }
+   }
+
+   // Sets last item of the chart the grey color
+    distributionColors[json.Components.IssuesDistribution.Items.length] = distributionColors[distributionColors.length -1];
+   
+   return actionItemsData.length > 0;
+}
+
+// Dynamically changes font size based on the size of the EWI name
+function SetupActionItemsLabelFontSize()
+{
+   var maxLabelSize = this.MaxElementSize(json.Components.IssuesBreakdown.Items);
+   var fontSize = this.GetSizeBasedOnLabelLength(maxLabelSize);   
+   this.ChangeLabelsFontSize(fontSize);   
+}
+
+// Gets the max size of the elements of an array
+function MaxElementSize(stringArray)
+{
+   var maxElementLength = 0;
+   
+   for(i = 0; i < stringArray.length; i++)
+   {
+      var ewiLength = stringArray[i].Recommendation.length;
+      if (ewiLength > maxElementLength ) maxElementLength =  ewiLength;      
+   }
+
+   return maxElementLength;
+}
+
+// Gets the new font size based on the largest EWI length 
+function GetSizeBasedOnLabelLength(largestEWILength)
+{
+   // Precalculated font ranges
+   var labelFontRanges = [{ length: 14, size: 14}, {length: 51, size: 13}, {length: 88, size: 12}];
+   var fontSize = 11;
+
+   for(i = 0; i < labelFontRanges.length; i++)
+   {
+      if(largestEWILength <= labelFontRanges[i]["length"])
+      {
+         fontSize = labelFontRanges[i]["size"];
+         break;
+      }
+   }
+
+   return fontSize; 
+}
+
+// Changes the font size of the labels in the top action distribution section
+function ChangeLabelsFontSize(newFontSize)
+{
+   var labelObjects = document.getElementsByClassName('label-text');
+   for(i = 0; i < labelObjects.length; i++) {
+      labelObjects[i].style.fontSize = newFontSize + "px";
+   }
+}
+
+function openLink(link = links.default) {
+    window.open(link);
+}
+
+function openDirectory() {
+    var location = window.location.pathname;
+    var directory = location.substring(0, location.lastIndexOf('/'));
+    this.openLink(directory);
+}
+
+// Definition of the Vue component containing the top action items distribution chart
+Vue.component('action-items-distribution-chart', {
+	extends: VueChartJs.Pie,
+	data: function () {
+		return {
+			datacollection: {
+				datasets: [
+					{
+						backgroundColor: distributionColors,
+						data: actionItemsData,
+                  datalabels:
+                  {
+                     formatter: CustomFormatter,
+                     anchor: 'end',
+                     align: 'end',
+                     color: '#808080',
+                     labels: labels
+                  }
+					},
+				],
+			},
+			options: {
+				responsive: true,
+            maintainAspectRatio: true,
+            radius: 60,            
+            animation: 
+            {
+               duration: 0
+            },
+            plugins:
+            {
+               legend: {
+                  display: false                  
+               }
+            }
+  	      },
+		}
+	},
+	mounted () {
+		this.renderChart(this.datacollection, this.options)
+	}
+});
+
+// Header section component
+Vue.component('header-component', {
+    props: [
+        'runid',
+        'date',
+        'scversion',
+        'language'
+    ],
+    template: `
+  <div id="header">
+    <div id="general-info">
+        <h4>Conversion Report</h4>
+        </br>
+        <p>Run ID: {{runid}}</p>
+        <p>{{date}}</p>
+        <p>SnowConvert version number {{scversion}}</p>
+    </div>
+    <div id="logo">
+        <img width="274.51" height="50" :src="'https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/img/' + language + '.svg'">
+    </div>
+  </div>
+`
+});
+
+// Summary section compoments
+Vue.component('summary-component', {
+    props: [
+        'enablescripting',
+        'language',
+        'summarysection'
+    ],
+    template: `
+    <div id="summary" class="card common-margin">
+        <div class="summary-grid-2">   
+            <general-summary v-bind:post="summarysection"></general-summary>    
+            <action-items-summary v-bind:post="[ summarysection.TotalConversionErrors, summarysection.TotalParsingErrors, summarysection.TotalWarnings, summarysection.TotalFilesNotGenerated ]"></action-items-summary>    
+        </div>
+        <div v-bind:class="[enablescripting ? 'summary-grid-3' : 'summary-grid-2']"> 
+            <conversion-summary v-bind:title="'SQL Line Conversion Summary'"
+                                v-bind:fields = "[ summarysection.SqlLinesCount, summarysection.SqlUnrecognizedElementsLOC ]"
+                                v-bind:conversionrate = "summarysection.SqlConversionRate"
+                                v-bind:partialconversionrate = "summarysection.SqlPartialConversionRate"
+                                v-bind:enablescripting="enablescripting">
+            </conversion-summary>    
+            <conversion-summary v-if="enablescripting"
+                                v-bind:title="'SCRIPT Line Conversion Summary'"
+                                v-bind:fields = "[ summarysection.ScriptIdentifiedObjects, summarysection.ScriptUnrecognizedElements ]"
+                                v-bind:conversionrate = "summarysection.ScriptLocConversionRate"
+                                v-bind:partialconversionrate = "summarysection.ScriptPartialLocConversionRate"
+                                v-bind:enablescripting="enablescripting">
+            </conversion-summary>    
+            <conversion-summary v-bind:title="'Objects Conversion Summary'"
+                                v-bind:fields = "language == 'Teradata' ? [ summarysection.TotalIdentifiedObjects, summarysection.UnrecognizedElements ] : [ summarysection.TotalIdentifiedObjects, summarysection.ObjectsSuccessfullyConverted, summarysection.UnrecognizedElements ]"
+                                v-bind:conversionrate = "summarysection.ObjectConversionRate"
+                                v-bind:partialconversionrate = "summarysection.ObjectPartialConversionRate"
+                                v-bind:enablescripting="enablescripting">
+            </conversion-summary>    
+       </div>
+    </div>
+`
+});
+
+Vue.component('general-summary', {
+    props: [
+        'post'
+    ],
+    template: `
+    <div>
+        <div class="summary-grid-2">
+            <summary-element v-bind:post="post.TotalFiles"></summary-element>
+            <summary-element v-bind:post="post.ConversionSpeed"></summary-element>
+        </div>
+        <div class="summary-grid-2">
+             <summary-element v-bind:post="post.TotalLinesOfCode"></summary-element>
+             <summary-element v-bind:post="post.ElapsedTime"></summary-element>
+        </div>
+    </div>
+`
+});
+
+Vue.component('conversion-summary', {
+    props: [
+        'title',
+        'fields',
+        'conversionrate',
+        'partialconversionrate',
+        'enablescripting'
+    ],
+    template: `
+    <div class="card common-margin">   
+        <div class="summary-content">
+            <div class="conversion-summary-title">{{ title }}</div>
+            <div :class="[enablescripting ? '' : 'summary-grid-2']">
+                <div class="summary-items">
+                    <div class="summary-item-name" v-for="field in fields">{{ field.ItemName }}: {{ field.ItemValue }}</div>
+                </div>
+                <conversion-chart-component v-bind:chartstyle="'conversion-summary-chart'"
+                                            v-bind:conversionrate="conversionrate.ItemValue"
+                                            v-bind:partialconversionrate="partialconversionrate.ItemValue"
+                                            v-bind:charttitle="conversionrate.ItemName">
+                </conversion-chart-component>
+            </div>
+        </div>
+    </div> 
+`
+});
+
+Vue.component('conversion-chart-component', {
+    props: [
+        'chartstyle',
+        'conversionrate',
+        'partialconversionrate',
+        'charttitle'
+    ],
+    methods: {
+        getConversionRateData: function (conversionRate, partialConversionRate) {
+            return {
+                labels: [''],
+                datasets: [
+                    {
+                        backgroundColor: '#81C784',
+                        label: 'Successfully converted',
+                        data: [conversionRate],
+                        datalabels: {
+                            display: false,
+                        }
+                    },
+                    {
+                        backgroundColor: conversionRate == '0' ? '#B5B7BA' : '#FFB74D',
+                        label: 'Percentage with Action Items',
+                        data: [partialConversionRate],
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'end',
+                            formatter: (val) => conversionRate + '%',
+                            font: {
+                                size: 14,
+                                family: 'Open Sans',
+                                weight: '600',
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+
+        getOptions: function () {
+            return {
+                barThickness: 22,
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                },
+                layout: {
+                    padding: {
+                        right: 60
+                    },
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                        grid:
+                        {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        }
+    },
+    template: `
+    <div :class="chartstyle">
+        <conversion-chart v-bind:datacollection="getConversionRateData(conversionrate, partialconversionrate)"
+                          v-bind:options="getOptions()">
+        </conversion-chart>
+        <div v-if="charttitle != undefined" class="conversion-summary-chart-title" >{{ charttitle }}</div>
+    </div>
+`
+});
+
+// Definition of the Vue component containing the general conversion rate chart
+Vue.component('conversion-chart', {
+    extends: VueChartJs.Bar,
+    props: ['datacollection', 'options'],
+    mounted() {
+        this.renderChart(this.datacollection, this.options)
+    }
+});
+
+Vue.component('action-items-summary', {
+    props: [
+        'post'
+    ],
+    template: `
+    <div class="card common-margin">   
+        <div class="summary-content">
+            <div class="action-items-summary-title">Action Items Summary</div>
+            <ul class="action-items-summary-content">
+                <li class="action-item" v-for="field in post">{{ field.ItemName }}: {{ field.ItemValue }}</li>
+            </ul>
+        </div>
+    </div>
+`
+});
+
+Vue.component('summary-element', {
+    props: ['post'],
+    template: `
+  <div class="card common-margin summary-item" >
+    <div class="summary-icons">
+        <img width="60" height="60" :src="'https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/img/' + post.ItemKey + '.svg'">
+    </div>
+    <div class="summary-item-info">
+        <p class="summary-item-value">{{ post.ItemValue }}</p>
+        <p class="summary-item-name">{{ post.ItemName }}</p>
+    </div>
+  </div > 
+`
+});
+
+
+// Code conversion rate section component
+
+Vue.component('file-object-breakdown', {
+    props: [
+        'language',
+        'enablescripting',
+        'sqlfilebreakdown',
+        'sqlobjectbreakdown',
+        'scriptfilebreakdown',
+        'scriptobjectbreakdown'
+    ],
+    methods: {
+        getSqlFileBreakdown: function () {
+            var properties = this.sqlfilebreakdown.Properties;
+
+            var summaryItems = this.language == 'Teradata' ? [this.sqlfilebreakdown.FileType, properties.SqlFileCount, properties.SqlLinesCount, properties.SqlTotalParsingErrors, properties.SqlTotalConversionErrors]
+                : [properties.SqlFileCount, properties.SqlLinesCount, properties.SqlIdentifiedObjects, properties.SqlTotalParsingErrors];
+
+            var successPercentages = this.language == 'Teradata' ? [properties.SqlFilesConversionRate, properties.SqlConversionRate ] : [ properties.SqlConversionRate ];
+
+            var failedPercentages = this.language == 'Teradata' ? [properties.SqlFilesNotGeneratedPercentage, properties.SqlPartialConversionRate] : [properties.SqlPartialConversionRate];
+
+            var conversionRate = { SuccessPercentages: successPercentages, FailedPercentages: failedPercentages }
+
+            return {
+                Kind: 'SQL',
+                SummaryItems: summaryItems,
+                ConversionRate: conversionRate,
+                Description: 'SQL identified objects'
+            };
+        },
+
+        getScriptFileBreakdown: function () {
+            var properties = this.scriptfilebreakdown.Properties;
+
+            var summaryItems = [this.scriptfilebreakdown.FileType, properties.ScriptFileCount, properties.ScriptTotalLoc, properties.ScriptTotalParsingErrors, properties.ScriptTotalConversionErrors];
+
+            var successPercentages = [properties.ScriptFilesConversionRate, properties.ScriptLocConversionRate];
+
+            var failedPercentages = [properties.ScriptFilesNotGeneratedPercentage, properties.ScriptPartialLocConversionRate];
+
+            var conversionRate = { SuccessPercentages: successPercentages, FailedPercentages: failedPercentages }
+
+            return {
+                Kind: 'SCRIPT',
+                SummaryItems: summaryItems,
+                ConversionRate: conversionRate,
+                DetailedItems: this.scriptfilebreakdown.DetailedScriptSummaries,
+                ConversionRateMode: 'LOC Conversion Rate',
+                Title: 'SCRIPT Files',
+                Description: 'script files (BTEQ, BTQ, FL, ML, TPUMP, TPT)'
+            };
+        },
+    },
+    data: function () {
+        return { SqlFileBreakdown: this.getSqlFileBreakdown(), ScriptFileBreakdown: this.getScriptFileBreakdown() };
+    },
+    template: `
+    <div class="object-file-level-breakdown">
+        <div class="object-file-level-breakdown-title common-margin">
+            File and Object level breakdown
+        </div>
+        <file-object-breakdown-component v-bind:title="language == 'Teradata' ? 'SQL/DML/DDL' : 'SQL Files'"
+                                         v-bind:subtitle="language == 'Teradata' ? 'SQL/DML/DDL Files' : undefined"
+                                         v-bind:filebreakdown="this.SqlFileBreakdown"
+                                         v-bind:objectbreakdown="sqlobjectbreakdown"
+                                         v-bind:objectsparent="'SQL/DML/DDL'">
+        </file-object-breakdown-component>
+
+        <file-object-breakdown-component v-if="enablescripting"
+                                         v-bind:title="'SCRIPT'"
+                                         v-bind:filebreakdown="this.ScriptFileBreakdown"
+                                         v-bind:objectbreakdown="scriptobjectbreakdown"
+                                         v-bind:objectsparent="'SCRIPT'"/>
+        </file-object-breakdown-component>
+    </div>
+    `,
+    mounted() {
+        var conversionChartSize = this.SqlFileBreakdown.ConversionRate.SuccessPercentages.length > 1 ? 275 : 210;
+        const filesCharts = document.querySelectorAll(".file-breakdown-chart div");
+        filesCharts.forEach(chart => chart.style = "height: " + conversionChartSize + "px");
+    }
+});
+
+Vue.component('file-object-breakdown-component', {
+    props: [
+        'title',
+        'subtitle',
+        'filebreakdown',
+        'objectbreakdown',
+        'objectsparent'
+    ],
+    template: `
+        <div class="card common-margin">
+            <div class="object-file-level-breakdown-content">
+                <file-breakdown-component v-bind:title="title"
+                                          v-bind:subtitle="subtitle"
+                                          v-bind:filebreakdown="filebreakdown">
+                    <template slot="file-description">
+                        The breakdown of all the database objects created or modified in all {{ filebreakdown.Kind }} files.
+                    </template>   
+                </file-breakdown-component>
+                <object-table-component v-bind:title="objectsparent + ' Identified Objects'"
+                                        v-bind:data="objectbreakdown.Items"
+                                        v-bind:conversionratemode="objectbreakdown.ConversionRateHeader">
+                    <template slot="description">
+                        The breakdown of all the database objects created or modified in all {{ filebreakdown.Description }}.
+                    </template>          
+                    <template slot="disclaimer">
+                        <ul class="object-breakdown-disclaimer">
+                            <li>The Object Conversion Rate is considering only identified objects to determine its value. Objects with errors are not considered fully converted objects.</li>
+                            <li>The data inside the "{{ filebreakdown.Kind }} - Identified Objects" table shows only information about identified objects. Parsing errors that could not be attributed to an object category are shown in the "{{ filebreakdown.Kind }} - Files" table.</li>
+                            <li>If a hyphen ('-') is listed in the table above, it means no objects of that kind were found in the input folder.</li>
+                            <li>If N/A is listed in the table above, SnowConvert is currently not converting that object type. It is likely listed for future conversion support.</li>
+                        </ul>
+                    </template>
+                </object-table-component>
+            </div>
+        </div>
+    `
+});
+
+Vue.component('file-breakdown-component', {
+    props: [
+        'title',
+        'subtitle',
+        'filebreakdown',
+    ],
+    template: `
+        <div class="file-breakdown-content">
+            <div class="file-breakdown-title">
+                {{ title }}
+            </div>
+            <div v-if="subtitle != undefined" class="file-breakdown-subtitle">
+                {{ subtitle }}
+            </div>
+            <div v-bind:class="['file-summary-' + filebreakdown.SummaryItems.length]">    
+                <summary-element v-for="summary in filebreakdown.SummaryItems" v-bind:post="summary"></summary-element>
+            </div>
+            <hr class="file-breakdown-separator">
+            <div class="file-breakdown-chart">    
+               <file-breakdown-chart v-bind:conversionrate="filebreakdown.ConversionRate"></file-breakdown-chart> 
+               <ul class="file-breakdown-disclaimer">
+                    <li>The {{ filebreakdown.Kind }} Conversion Rate and Lines of code are considering both identified objects and unrecognized elements to determine its value. As a result, the average for the conversion rates of Identified Objects given below may differ from the overall rate given above.</li>
+                    <li>Parsing errors are also considering the unrecognized objects, so this is not a sum of the parsing errors per object presented below.</li>
+               </ul>
+            </div>  
+            <hr class="file-breakdown-separator">
+            <div v-if="filebreakdown.DetailedItems != undefined">
+                <object-table-component v-bind:title="filebreakdown.Title"
+                                        v-bind:data="filebreakdown.DetailedItems"
+                                        v-bind:conversionratemode="filebreakdown.ConversionRateMode">
+                    <template slot="description">
+                        <slot name="file-description"></slot>
+                    </template>
+                    <template slot="disclaimer">
+                        <div class="object-table-disclaimer">
+                            If a hyphen ('-') is listed in the table above, it means no files of that kind were found in the input folder.
+                        </div>
+                    </template>
+                </object-table-component>
+            </div>  
+        </div>
+    `
+});
+
+Vue.component('object-table-component', {
+    props: [
+        'title',
+        'data',
+        'conversionratemode'
+    ],
+    template: `
+        <div class="object-table">
+            <div class="object-table-title">{{ title }}</div>
+            <div class="object-table-description">
+                <slot name="description"></slot>
+            </div>
+            <v-simple-table dense>
+                <template v-slot:default>
+                  <thead>
+                    <tr>
+                      <th class="object-table-header">
+                        Object
+                      </th>
+                      <th class="object-table-header">
+                        Object Conversion Rate
+                      </th>
+                      <th class="object-table-header">
+                        {{ conversionratemode }}
+                      </th>
+                      <th class="object-table-header">
+                        Total Object Quantity
+                      </th>
+                      <th class="object-table-header">
+                        Total LOC
+                      </th>
+                      <th class="object-table-header">
+                        Parsing Errors
+                      </th>
+                      <th class="object-table-header">
+                        Conversion Errors
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(item, index) in data" :key="item.Name" v-bind:class="[index % 2 == 0 ? 'light-row' : 'dark-row ']" class="object-table-row">
+                      <td class="object-name-column">{{ item.Name }}</td>
+                      <td class="object-table-cell" v-if="isNaN(item.ObjectConversionRate)">
+                        {{ item.ObjectConversionRate }}
+                      </td>
+                      <td class="object-table-chart-cell" v-else>
+                        <conversion-chart-component v-bind:chartstyle="'object-conversion-summary-chart'"
+                                                    v-bind:conversionrate="item.ObjectConversionRate"
+                                                    v-bind:partialconversionrate="item.ObjectNotConvertedPercentage">
+                        </conversion-chart-component>
+                      </td>
+                      <td class="object-table-cell" v-if="isNaN(item.ConversionRate)">
+                        {{ item.ConversionRate }}
+                      </td>
+                      <td class="object-table-chart-cell" v-else>
+                        <conversion-chart-component v-bind:chartstyle="'object-conversion-summary-chart'"
+                                                    v-bind:conversionrate="item.ConversionRate"
+                                                    v-bind:partialconversionrate="item.NotConvertedPercentage">
+                        </conversion-chart-component>
+                      </td>
+                      <td class="object-table-cell total-object-quantity-column">{{ item.Quantity }}</td>
+                      <td class="object-table-cell">{{ item.LinesOfCode }}</td>
+                      <td class="object-table-cell">{{ item.ParsingErrors }}</td>
+                      <td class="object-table-cell">{{ item.ConversionErrors }}</td>
+                    </tr>
+                  </tbody>
+                </template>
+            </v-simple-table>
+           <slot name="disclaimer"></slot>
+
+        </div>
+        
+    `
+});
+
+Vue.component('file-breakdown-chart', {
+    extends: VueChartJs.Bar,
+    props: [
+        'conversionrate'
+    ],
+    methods: {
+        getDataLabelConfig: function () {
+            return {
+                formatter: CustomFormatter,
+                align: 'top',
+                color: '#808080',
+                labels: {
+                    title: {
+                        font: {
+                            size: 16,
+                            family: 'Open Sans',
+                            weight: '600',
+                        }
+                    },
+                },
+                padding: 15
+            };
+        }   
+    },
+    data: function () {
+        return {
+            datacollection: {
+                labels: this.conversionrate.SuccessPercentages.map(item => item.ItemName),
+                datasets: [
+                    {
+                        label: 'Successfully Converted',
+                        backgroundColor: '#81C784',
+                        data: this.conversionrate.SuccessPercentages.map(item => item.ItemValue),
+                        datalabels: this.getDataLabelConfig()
+                    },
+                    {
+                        label: 'Percentage with Action Items',
+                        backgroundColor: '#FFB74D',
+                        data: this.conversionrate.FailedPercentages.map(item => item.ItemValue),
+                        datalabels: this.getDataLabelConfig()
+                    }
+                ]
+            },
+            options: {
+                barThickness: 22,
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        labels: {
+                            boxWidth: 16,
+                            boxHeight: 16,
+                            useBorderRadius: true,
+                            borderRadius: 2,
+                            font: {
+                                size: 14,
+                                family: 'Open Sans',
+                                weight: '400',
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Code Conversion Rate',
+                            padding: {
+                                bottom: 20
+                            },
+                            font: {
+                                size: 20,
+                                family: 'Open Sans',
+                                weight: '600',
+                            }
+                        }
+                    },
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        grid:
+                        {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                        grid:
+                        {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                size: 14,
+                                family: 'Open Sans',
+                                weight: '400',
+                            },
+                            padding: 20,
+                            display: this.conversionrate.SuccessPercentages.length > 1,
+                        }
+                    }
+                }
+            },
+            events: {
+                beforeInit: function (chart, options) {
+                    const originalFit = chart.legend.fit;
+                    chart.legend.fit = function fit() {
+                        originalFit.bind(chart.legend)();
+                        this.height = 100;
+                    }
+                }
+            },
+        }
+    },
+    mounted() {
+        this.addPlugin(this.events);
+        this.renderChart(this.datacollection, this.options)
+    }
+});
+
+// Top actions section components
+Vue.component('issues-breakdown-component', {
+    props: [
+        'issuesbreakdown',
+        'issuesdistribution',
+        'slug'
+    ],
+    methods: {
+        openLink: openLink
+    },
+    template: `
+    <div id="issues-breakdown" class="card common-margin">
+        <div class="issues-breakdown-title">Issues Breakdown</div>
+        <error-categorization-component></error-categorization-component>
+        <issues-summary-component v-bind:props="issuesbreakdown.Properties"/>
+        <div class="issues-breakdown-grid-2">   
+            <issues-grid-component v-bind:actionitems="issuesbreakdown.Items">
+            </issues-grid-component>
+            <top-action-items-distribution-component v-bind:actionitems="issuesdistribution.Items">
+            </top-action-items-distribution-component>
+        </div>
+        <issues-breakdown-footer-component v-bind:slug="slug"/>
+    </div>
+    `
+});
+
+Vue.component('error-categorization-component', {
+    template: `
+    <div class="error-categorization">
+        <div class="error-categorization-title">Error Categorization </div>
+        <div class="error-categorization-types">
+            <error-type-component v-bind:category="'low'">
+                Warnings for source code that there was no direct conversion to Snowflake. The code has been converted to a functionally equivalent output but should still be reviewed.
+            </error-type-component>
+            <error-type-component v-bind:category="'medium'">
+                Errors that produce a functional or runtime difference. The user may have to invest a low amount of manual effort to complete the conversion. 
+            </error-type-component>
+            <error-type-component v-bind:category="'high'">
+                Errors that produce a functional or runtime difference. The user may have to invest a high amount of manual effort to complete the conversion. 
+            </error-type-component>
+            <error-type-component v-bind:category="'critical'">
+                Parsing errors or errors that cause significant conversion exceptions in SnowConvert. If the source code is correct, a significant intervention will be required. 
+            </error-type-component>
+        </div>
+    </div>
+    `
+});
+
+Vue.component('error-type-component', {
+    props: [
+        'category'
+
+    ],
+    template: `
+    <div class="error-type">
+        <div class="error-type-bullet"
+            v-bind:class="[category + '-issue']"/>
+        <div class="error-type-content">
+            <div class="error-type-title">
+                {{ category.toUpperCase() }}:
+            </div>
+            <div class="error-type-explanation">
+                <slot></slot>
+            </div>
+        </div>    
+    </div>
+    `
+});
+
+Vue.component('issues-summary-component', {
+    props: [
+        'props'
+    ],
+    template: `
+    <div class="issues-summary">
+        <issues-number-component v-bind:title="'Number of issues'"
+                                 v-bind:content="[props.LowIssues, props.MediumIssues, props.HighIssues, props.CriticalIssues]" />
+        <issues-number-component v-bind:title="'Number of unique issues'"
+                                 v-bind:content="[props.LowUniqueIssues, props.MediumUniqueIssues, props.HighUniqueIssues, props.CriticalUniqueIssues]" />
+    </div>
+    `
+});
+
+Vue.component('issues-number-component', {
+    props: [
+        'title',
+        'content'
+    ],
+    template: `
+    <div class="issues-number">
+        <div class="issues-number-title">
+            {{ title }}
+        </div>
+        <div class="issues-number-content">
+            <issue-count-component v-for="issue in content" v-bind:issue="issue"></issue-count-component>
+        </div>
+    </div>
+    `
+});
+
+Vue.component('issue-count-component', {
+    props: [
+        'issue'
+    ],
+    template: `
+    <div class="issue-count-column">
+        <div v-bind:class="[issue.ItemKey]" class="issue-count-bullet"/>
+        <div class="issue-count">{{issue.ItemValue}}</div>
+    </div>
+    `
+});
+
+Vue.component('issues-grid-component', {
+    props: [
+        'actionitems'
+    ],
+    methods: {
+        openLink: openLink
+    },
+    template: `
+    <div class="issues-column">  
+        <div id="top-actions-explanation">
+            <div id="issues-icon">
+                <img width="56" height="56" src="https://mobilizeproduct.blob.core.windows.net/snow/SnowContent/htmlreport/img/issues.svg">
+            </div>
+            <div class="issues-explanation-section">
+                <div class="issues-explanation-title">
+                    Top Issue Items
+                </div>
+                <div id="explanation-text">
+                    If you are using the full version of SnowConvert, you can find out the exact file and location of each error in the Issues Report in the output reports folder created by SnowConvert.
+                </div>
+            </div>    
+            
+        </div>
+        <div class="issues-grid issues-grid-item">
+            <div><strong>ACTION ITEMS</strong></div>
+            <div><strong>DESCRIPTION</strong></div>
+            <div><strong>INSTANCES</strong></div>
+        </div>
+        <hr class="issue-separator">
+        <issue-component v-for="post in actionitems" v-bind:post="post"></issue-component>
+    </div>    
+`
+});
+
+Vue.component('issue-component', {
+    props: [
+        'post'
+    ],
+    methods: {
+        openLink: openLink
+    },
+    template: `
+    <div>
+        <div class="issues-grid issues-grid-item">
+            <div class="link" @click="openLink(post.DocumentationUrl)">{{post.Name}}</div>
+            <div class="issue-description-column">
+                <div v-bind:class="[post.CssClass]" class="issue-bullet"></div>    
+                <div class="issue-description">{{post.Recommendation}}</div>
+            </div>
+            <div>{{post.Instances}}</div>
+        </div>
+        <hr class="issue-separator">
+    </div>
+    `
+});
+
+
+Vue.component('top-action-items-distribution-component', {
+    props: [
+        'actionitems'
+    ],
+    template: `
+    <div id="actions-distribution" class="card common-margin">
+        <div class="card-title">Top Issues Items Distribution</div>
+        <div id="action-distribution-content">
+            <div>
+                <action-items-distribution-chart id="distribution-chart"></action-items-distribution-chart>
+            </div>
+            <div id="labels">
+                <issue-description-component v-for="(post, index) in actionitems" v-bind:post="post" v-bind:index="index"></issue-description-component>
+            </div>
+        </div>
+    </div>
+    `
+});
+
+Vue.component('issue-description-component', {
+    props: [
+        'post',
+        'index',
+        'itemscount'
+    ],
+    template: `
+    <div class="label">
+        <div v-if="post.DistributionPercentage > 0">
+            <div v-bind:class="[index == itemscount ? 'slide-3' : 'slide-' + index]" class="bullet-point"></div>
+            <div class="label-text">
+                {{post.Recommendation}}
+            </div>
+        </div>
+    </div>
+    `
+});
+
+Vue.component('top-no-action-items-component', {
+    template: `
+    <div id="top-actions" class="card common-margin">
+        <div class="card-title">Issues Breakdown</div>
+        <div id="no-items-content" class="card-content">
+            No action items requires manual work or inspection after running SnowConvert.
+        </div>
+    </div>
+    `
+});
+
+Vue.component('issues-breakdown-footer-component', {
+    props: [
+        'slug',
+    ],
+    methods: {
+        openLink: openLink,
+        formatLink: function () {
+            return `https://docs.mobilize.net/snowconvert/${this.slug}/issues`;
+        }
+    },
+    template: `
+    <div class="issues-breakdown-footer">
+        <p>
+            If you are using the full version of SnowConvert, you can find out the exact file and location of each error in the Issues Report in the output reports folder created by SnowConvert.
+        </p>
+        <p>
+            For more information on the error codes and their severity, please visit our documentation page on errors:
+        </p>
+        <p>
+            <span class="link" @click="openLink(formatLink())">{{ formatLink() }}</span>.
+        </p>
+    </div>
+    `
+});
+
+// Footer section component
+Vue.component('footer-component', {
+    data() {
+        return {
+            links: links
+        }
+    },
+    methods: {
+        openLink: openLink,
+        openDirectory: openDirectory
+    },
+    template: `
+    <div id="footer">
+        <div id="reports-button-container">
+            <button id="reports-button" type="button" class="reports-button button" @click="openDirectory()">View Complete Reports</button>
+        </div>
+        <div id="footer-text">
+            <span>
+                Review the full report of your source code here. Note that there are various CSV files, the HTML report, and the report document that will be downloaded. For more information on how to interpret the complete report
+            </span>
+            <span class="link" @click="openLink(links.reportsDocumentation)">visit our documentation site.</span>
+        </div>
+    </div>
+    `
+});
+
+// Vue application
+var app = new Vue({
+   el: '#app',
+   vuetify: new Vuetify(),
+   data: {
+       migrationData: json,
+       links: links
+   },
+   methods: {
+       openLink: function (link = links.default) {
+            window.open(link);         
+       },
+       openDirectory: function ()
+       {
+            var location = window.location.pathname;
+            var directory = location.substring(0, location.lastIndexOf('/'));
+            this.openLink(directory);
+       },
+       FillTopActionItemDistributionInventories: FillTopActionItemDistributionInventories
+   },
+   mounted() 
+   {
+       document.getElementById("content").hidden = false;
+       document.getElementById("loader").hidden = true;
+       SetupActionItemsLabelFontSize();
+   }
+});
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+SessionID,Category,Grammar_Element,HighLevelObject,FileType,Total_Object_Count,Count_Converted_LOC,Count_Not_Converted_LOC,Count_Conversion_Errors,Count_Parsing_Errors
+8c246674-3b68-41de-8096-c333d8a01bcc,Comparison Operators and Functions,=,CREATE TABLE,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Comparison Operators and Functions,=,CREATE / REPLACE PROCEDURE,,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Comparison Operators and Functions,=,CREATE / REPLACE VIEW,SQL,4,7,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,String Operators and Functions,||,CREATE / REPLACE PROCEDURE,,14,14,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,String Operators and Functions,||,CREATE TABLE,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Procedure Statements,ABORT,CREATE / REPLACE PROCEDURE,,4,7,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statements,ACCESS,CREATE / REPLACE VIEW,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",ALL,CREATE / REPLACE VIEW,SQL,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Function,avg,CREATE / REPLACE VIEW,SQL,7,7,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Function,BEGIN,CREATE / REPLACE VIEW,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Logical Predicates,BETWEEN / NOT BETWEEN,CREATE / REPLACE PROCEDURE,,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statements,CALL,CREATE / REPLACE PROCEDURE,,12,12,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Case Expressions,CASE,CREATE / REPLACE PROCEDURE,,2,10,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,CHAR,CREATE TABLE,SQL,15,15,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CHARACTER SET,CREATE TABLE,SQL,140,140,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CHARACTER SET,CREATE / REPLACE PROCEDURE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CHECK,CREATE TABLE,SQL,6,6,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CHECKSUM,CREATE TABLE,SQL,36,36,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CHECKSUM,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,COMPRESS,CREATE TABLE,SQL,28,28,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Procedure statements,CREATE / REPLACE PROCEDURE,CREATE / REPLACE PROCEDURE,SQL,7,190,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CREATE / REPLACE VIEW,CREATE / REPLACE VIEW,SQL,12,123,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CREATE MACRO,CREATE MACRO,SQL,2,16,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CREATE MULTISET TABLE,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CREATE MULTISET TABLE,CREATE TABLE,SQL,10,10,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CREATE SET TABLE,CREATE TABLE,SQL,26,26,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Table Statements,CREATE TABLE,CREATE TABLE,SQL,40,654,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Table Statements,CREATE TABLE,CREATE TABLE,BTEQ,1,10,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,CREATE VOLATILE TABLE,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Procedure Statements,CURSOR DECLARE,CREATE / REPLACE PROCEDURE,,8,12,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,DATE,CREATE TABLE,SQL,26,0,26,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,DATE,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,DECIMAL,CREATE TABLE,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Procedure Statements,DECLARE CONDITION HANDLER,CREATE / REPLACE PROCEDURE,,1,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statement,DELETE,CREATE MACRO,,1,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statements,DESC,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statements,DESC,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,DROP TABLE,Not specified,BTEQ,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Procedure Statements,DYNAMIC RESULT SETS,CREATE / REPLACE PROCEDURE,SQL,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,BTEQ Sequence Controls,ERRORLEVEL,ERRORLEVEL,BTEQ,6,6,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,BTEQ Sequence Controls,EXIT or QUIT,EXIT or QUIT,BTEQ,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Function,EXTRACT,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Procedure Statements,FETCH INTO,CREATE / REPLACE PROCEDURE,,11,11,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Attribute Functions,FORMAT,CREATE TABLE,SQL,26,26,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",FROM,SELECT,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",FROM,CREATE TABLE,SQL,2,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",FROM,SELECT,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",FROM,CREATE / REPLACE VIEW,SQL,14,21,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,BTEQ Sequence Controls,GOTO,IF,BTEQ,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",GROUP BY,CREATE / REPLACE VIEW,SQL,1,5,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,BTEQ Sequence Controls,IF,IF,BTEQ,8,8,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,IN,CREATE / REPLACE PROCEDURE,,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,IN,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,IN,CREATE TABLE,SQL,6,0,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statement,INSERT,INSERT,BTEQ,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statement,INSERT,CREATE / REPLACE PROCEDURE,,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,INTEGER,CREATE / REPLACE PROCEDURE,SQL,6,6,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,INTEGER,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,INTEGER,CREATE TABLE,SQL,90,90,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Function,INTERVAL,CREATE / REPLACE VIEW,SQL,2,12,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL DAY,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL DAY,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL DAY TO HOUR,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL DAY TO MINUTE,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL DAY TO SECOND,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL HOUR,CREATE TABLE,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL HOUR TO MINUTE,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL HOUR TO MINUTE,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL HOUR TO SECOND,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL HOUR TO SECOND,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL MINUTE,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL MINUTE TO SECOND,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL MONTH,CREATE TABLE,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL MONTH,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL SECOND,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL YEAR,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL YEAR,CREATE TABLE,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,INTERVAL YEAR TO MONTH,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Logical Predicates,IS NULL / IS NOT NULL,CREATE / REPLACE PROCEDURE,,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Logical Predicates,IS NULL / IS NOT NULL,CREATE / REPLACE VIEW,SQL,1,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",JOIN,CREATE / REPLACE VIEW,SQL,1,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,BTEQ Sequence Controls,LABEL,Not specified,BTEQ,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,BTEQ Sequence Controls,LABEL,LABEL,BTEQ,5,5,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statements,LOCK TABLE,CREATE / REPLACE VIEW,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,MERGEBLOCKRATIO,CREATE TABLE,SQL,36,36,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,MERGEBLOCKRATIO,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",NAMED,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,NO AFTER JOURNAL,CREATE TABLE,SQL,36,36,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,NO AFTER JOURNAL,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,NO BEFORE JOURNAL,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,NO BEFORE JOURNAL,CREATE TABLE,SQL,36,36,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,NO FALLBACK,CREATE TABLE,SQL,36,36,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,NO FALLBACK,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,NOT NULL,CREATE MACRO,SQL,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,NOT NULL,CREATE TABLE,SQL,127,127,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Table Statements,PARTITION BY,CREATE TABLE,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,PERIOD,CREATE TABLE,SQL,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,PERIOD,CREATE / REPLACE VIEW,SQL,2,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Procedure Statements,PREPARE FROM,CREATE / REPLACE PROCEDURE,,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,PRIMARY INDEX,CREATE TABLE,SQL,12,0,12,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,PRIMARY KEY,CREATE TABLE,SQL,23,23,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Function,RANK,CREATE / REPLACE VIEW,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Function,RANK,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Function,ROUND,CREATE / REPLACE VIEW,SQL,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statement,SELECT,CREATE / REPLACE PROCEDURE,,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",SELECT,CREATE / REPLACE VIEW,SQL,15,107,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statement,SELECT,SELECT,BTEQ,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statement,SELECT,SELECT,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",SELECT,CREATE TABLE,SQL,2,11,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Manipulation Language Statement,SELECT,CREATE MACRO,,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Procedure Statements,SET,CREATE / REPLACE PROCEDURE,,36,40,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SMALLINT,CREATE MACRO,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SMALLINT,CREATE TABLE,SQL,22,22,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlAnd,CREATE / REPLACE VIEW,SQL,1,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlArgument,CREATE / REPLACE VIEW,SQL,42,0,50,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlArgument,Not specified,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlArgument,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlArgumentList,CREATE / REPLACE VIEW,SQL,33,0,48,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlArgumentList,CREATE TABLE,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlArgumentList,Not specified,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlAsCorrelationName,CREATE TABLE,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlAsCorrelationName,CREATE / REPLACE VIEW,SQL,5,0,5,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlAsSubqueryClause,CREATE TABLE,SQL,2,18,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlCastOperand,CREATE / REPLACE VIEW,SQL,9,9,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlCastSpecification,CREATE / REPLACE VIEW,SQL,9,8,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlCheckBody,CREATE TABLE,SQL,6,0,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlColumnDefinition,CREATE TABLE,SQL,353,412,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlColumnDefinition,CREATE TABLE,BTEQ,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlColumnNameElement,CREATE TABLE,SQL,24,0,24,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlColumnNameList,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlCompositeArgument,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlCompoundStat,CREATE / REPLACE PROCEDURE,,9,186,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlCreateTableOnCommit,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDataTypeSize,CREATE TABLE,SQL,186,0,186,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDataTypeSize,CREATE / REPLACE PROCEDURE,SQL,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDataTypeSize,CREATE / REPLACE VIEW,SQL,7,0,7,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDataTypeSize,CREATE TABLE,BTEQ,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDateLiteral,CREATE / REPLACE VIEW,SQL,6,0,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDateTimeType,CREATE / REPLACE VIEW,SQL,2,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDateTimeType,CREATE TABLE,SQL,29,0,29,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDay,CREATE / REPLACE VIEW,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDay,CREATE TABLE,SQL,4,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDeclareStatement,CREATE / REPLACE PROCEDURE,,15,15,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDifferent,CREATE / REPLACE PROCEDURE,,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDotName,CREATE / REPLACE PROCEDURE,SQL,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDotName,CREATE MACRO,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDotName,Not specified,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDotName,SELECT,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDotName,CREATE / REPLACE VIEW,SQL,27,12,15,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlDotName,CREATE TABLE,SQL,52,40,12,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlElse,CREATE / REPLACE PROCEDURE,,3,6,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlExprAlias,CREATE / REPLACE VIEW,SQL,36,0,48,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlExprAlias,CREATE TABLE,SQL,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlForStatement,CREATE / REPLACE PROCEDURE,,2,28,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlFromExprPostArgument,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlGroupingExpr,CREATE / REPLACE VIEW,SQL,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlGt,CREATE / REPLACE VIEW,SQL,1,0,5,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlGt,CREATE / REPLACE PROCEDURE,,1,5,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlHour,CREATE / REPLACE VIEW,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlHour,CREATE TABLE,SQL,5,5,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlIfStatement,CREATE / REPLACE PROCEDURE,,7,45,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlInsertIntoBody,INSERT,BTEQ,3,0,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlInsertionTargetName,INSERT,BTEQ,3,0,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlInsertStartKeyword,INSERT,BTEQ,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlIntervalFractionalPrecision,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlIntervalLiteral,CREATE / REPLACE VIEW,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlIntervalSecond,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlIntervalStartToEnd,CREATE / REPLACE VIEW,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlIntervalStartToEnd,CREATE TABLE,SQL,7,0,7,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlJoinedTable,CREATE / REPLACE VIEW,SQL,1,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralExpr,Not specified,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralExpr,CREATE / REPLACE PROCEDURE,,15,15,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralExpr,CREATE TABLE,SQL,53,0,53,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralExpr,CREATE / REPLACE VIEW,SQL,19,0,19,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralExpr,INSERT,BTEQ,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralPrecision,CREATE TABLE,SQL,206,0,206,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralPrecision,CREATE / REPLACE PROCEDURE,SQL,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralPrecision,CREATE / REPLACE VIEW,SQL,7,0,7,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLiteralPrecision,CREATE TABLE,BTEQ,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLt,CREATE / REPLACE PROCEDURE,,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLtEq,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlLtEq,CREATE / REPLACE PROCEDURE,,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlMinus,CREATE / REPLACE VIEW,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlMinute,CREATE / REPLACE VIEW,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlMinute,CREATE TABLE,SQL,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlMonth,CREATE / REPLACE VIEW,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlMonth,CREATE TABLE,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlNestedQuery,CREATE / REPLACE VIEW,SQL,1,0,18,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlNonSecondDateField,CREATE TABLE,SQL,8,0,8,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlNonSecondDateField,CREATE / REPLACE VIEW,SQL,6,0,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlNonSecondEndField,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlNonSecondEndField,CREATE TABLE,SQL,4,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlNotKeyword,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlNotKeyword,CREATE TABLE,SQL,140,0,140,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlNullPredicatePart2,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlOnCondition,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlOpenStatement,CREATE / REPLACE PROCEDURE,,8,8,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlOverlapsExpression,CREATE / REPLACE VIEW,SQL,1,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlParameterList,CREATE / REPLACE PROCEDURE,SQL,7,0,16,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlParenthesizedExpr,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlParenthesizedExpr,CREATE TABLE,SQL,6,0,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlParenthesizedExpr,CREATE / REPLACE PROCEDURE,,6,10,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlPlus,CREATE / REPLACE VIEW,SQL,18,0,18,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlPreserveCommitAction,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlQualifiedNameExpr,CREATE TABLE,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlQualifiedNameExpr,CREATE / REPLACE VIEW,SQL,19,19,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlQualifiedNameExpr,CREATE / REPLACE PROCEDURE,,5,5,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlQualify,CREATE / REPLACE VIEW,SQL,1,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlQualify,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlRoutineInvocation,Not specified,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSecondDateField,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSecondEndField,CREATE TABLE,SQL,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSecondEndField,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSetOperationPart,CREATE / REPLACE VIEW,SQL,3,0,30,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSignedNumericLiteral,CREATE TABLE,SQL,84,0,84,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSignedNumericLiteral,INSERT,BTEQ,6,0,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSignedNumericLiteral,CREATE / REPLACE PROCEDURE,,29,29,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSignedNumericLiteral,CREATE / REPLACE VIEW,SQL,10,0,10,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleDataType,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleDataType,CREATE TABLE,SQL,53,53,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleDataType,CREATE MACRO,SQL,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,CREATE / REPLACE PROCEDURE,SQL,20,12,8,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,CREATE / REPLACE VIEW,SQL,99,0,99,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,Not specified,BTEQ,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,INSERT,BTEQ,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,SELECT,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,Not specified,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,CREATE TABLE,SQL,501,0,501,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,CREATE MACRO,SQL,7,1,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,SELECT,BTEQ,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSimpleName,CREATE TABLE,BTEQ,4,1,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSingleNameExpr,CREATE TABLE,SQL,22,0,22,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSingleNameExpr,CREATE / REPLACE PROCEDURE,,67,67,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSingleNameExpr,SELECT,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSingleNameExpr,SELECT,BTEQ,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSingleNameExpr,CREATE / REPLACE VIEW,SQL,115,0,115,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlStartField,CREATE TABLE,SQL,7,0,7,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlStartField,CREATE / REPLACE VIEW,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlSubQuery,CREATE TABLE,SQL,2,0,15,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlTableConstraintDefinition,CREATE TABLE,SQL,23,0,23,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlTableElementList,CREATE TABLE,SQL,37,0,557,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlTableElementList,CREATE TABLE,BTEQ,1,0,5,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlTableOrQueryFactor,SELECT,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlTableOrQueryFactor,SELECT,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlTableOrQueryFactor,CREATE TABLE,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlTableOrQueryFactor,CREATE / REPLACE VIEW,SQL,16,16,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlTimestampLiteral,CREATE / REPLACE VIEW,SQL,14,0,14,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlUniqueConstraintDefinition,CREATE TABLE,SQL,23,0,23,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlWhile,CREATE / REPLACE PROCEDURE,,3,40,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlWindowNameOrSpecification,CREATE / REPLACE VIEW,SQL,1,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlWindowNameOrSpecification,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlWindowPartitionClause,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlWindowPartitionClause,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlWindowSpecification,CREATE / REPLACE VIEW,SQL,1,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlWindowSpecification,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlWithOrWithoutData,CREATE TABLE,SQL,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlYear,CREATE TABLE,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,SqlYear,CREATE / REPLACE VIEW,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdAsClause,CREATE TABLE,SQL,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdAsClause,CREATE / REPLACE VIEW,SQL,36,0,36,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdAsTableOrViewReference,CREATE TABLE,SQL,1,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCaseSpecificKeyword,CREATE TABLE,SQL,140,0,140,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCaseSpecificPhrase,CREATE TABLE,SQL,140,0,140,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCast,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCastArgument,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCastArgumentByDataAttribute,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCastTargetType,CREATE / REPLACE VIEW,SQL,7,0,8,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCharacterSetDataTypeAttribute,CREATE TABLE,SQL,140,140,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdChecksumDefaultIntegrityCheckingOption,CREATE TABLE,SQL,36,36,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdChecksumDefaultIntegrityCheckingOption,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdColumnPartition,CREATE TABLE,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdColumnPartitionDefinition,CREATE TABLE,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCompressConstant,CREATE TABLE,SQL,116,0,116,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCompressConstantSequence,CREATE TABLE,SQL,21,0,21,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCompressPhrase,CREATE TABLE,SQL,28,0,28,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCompressUsing,CREATE TABLE,SQL,4,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCompressUsingColumnConstraint,CREATE TABLE,SQL,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCreateTableOptionScope,CREATE TABLE,SQL,36,0,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCreateTableOptionScope,CREATE TABLE,BTEQ,1,0,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCreateTableStart,CREATE TABLE,SQL,40,0,41,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdCreateTableStart,CREATE TABLE,BTEQ,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdDateCastTarget,CREATE / REPLACE VIEW,SQL,2,0,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdDecompressUsing,CREATE TABLE,SQL,4,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdExpressionSequence,INSERT,BTEQ,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdHandlerSingleStatement,CREATE / REPLACE PROCEDURE,,1,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdIndexDefinitionOrPartitionOption,CREATE TABLE,SQL,15,0,15,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdInsertValuesSequence,INSERT,BTEQ,3,0,3,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdIntervalQualifierPostFunction,CREATE / REPLACE VIEW,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdLdiffKeyword,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdLockingForPreposition,CREATE / REPLACE VIEW,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdLockingKeyword,CREATE / REPLACE VIEW,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdLockingRowConfig,CREATE / REPLACE VIEW,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdMacroArgument,CREATE MACRO,SQL,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdMacroArgumentAttributes,CREATE MACRO,SQL,4,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdMacroColumns,CREATE MACRO,SQL,2,0,6,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdMultipleColumns,CREATE TABLE,SQL,12,0,12,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdNotCaseSpecificColumnConstraint,CREATE TABLE,SQL,140,140,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdOptions,CREATE TABLE,BTEQ,1,5,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdOptions,CREATE TABLE,SQL,37,182,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdParameterDeclaration,CREATE / REPLACE PROCEDURE,SQL,9,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdPartitionByColumnExpr,CREATE TABLE,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdPartitionByExpr,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdPeriodDiffFunctionExpr,CREATE / REPLACE VIEW,SQL,2,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdProcedureParameterCharacterSetAttribute,CREATE / REPLACE PROCEDURE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdRdiffKeyword,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdReplaceMacroStart,CREATE MACRO,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdReplaceProcedureStart,CREATE / REPLACE PROCEDURE,SQL,7,0,7,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdReplaceViewStart,CREATE / REPLACE VIEW,SQL,12,0,12,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsBinaryOperation,IF,BTEQ,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsErrorCodeStatusCode,EXIT or QUIT,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsErrorLevelStatusCode,IF,BTEQ,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdServerCharacterSet,CREATE TABLE,SQL,140,0,140,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdServerCharacterSet,CREATE / REPLACE PROCEDURE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdSingleColumnPartitioning,CREATE TABLE,SQL,2,0,2,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsLiteralExpr,IF,BTEQ,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsSql,TdsSql,BTEQ,14,14,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsSql,Not specified,BTEQ,1,10,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsStatementSColon,Not specified,BTEQ,17,26,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsStatementSColon,IF,BTEQ,4,4,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdsUnit,Not specified,BTEQ,1,30,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdTableJournalNoModifierOption,CREATE TABLE,SQL,72,72,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdTableJournalNoModifierOption,CREATE TABLE,BTEQ,2,2,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdTableLogOption,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdTableOptionDefaultModifier,CREATE TABLE,SQL,36,36,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdTableOptionDefaultModifier,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdViewQuery,CREATE / REPLACE VIEW,SQL,12,0,116,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdWindowOrderBy,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdWindowOrderBy,CREATE / REPLACE VIEW,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdWindowUDF,CREATE TABLE,SQL,1,0,1,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,TdWindowUDF,CREATE / REPLACE VIEW,SQL,1,0,4,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,TIMESTAMP WITH TIME ZONE,CREATE / REPLACE VIEW,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type,TIMESTAMP WITH TIME ZONE,CREATE TABLE,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Definition Statements,TITLE,CREATE TABLE,SQL,7,7,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Data Type Conversion Functions,TO_DATE,CREATE / REPLACE VIEW,SQL,7,7,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Arithmetic Operators and Functions,TRUNC,CREATE / REPLACE VIEW,SQL,6,6,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Set Operators,UNION,CREATE / REPLACE VIEW,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,VARCHAR,CREATE TABLE,SQL,126,126,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,VARCHAR,CREATE TABLE,BTEQ,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,Uncategorized,VARCHAR,CREATE / REPLACE PROCEDURE,SQL,3,3,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",WHERE,CREATE TABLE,SQL,1,1,0,0,0
+8c246674-3b68-41de-8096-c333d8a01bcc,"SELECT statement syntax, options, clauses, modifiers",WHERE,CREATE / REPLACE VIEW,SQL,6,19,0,0,0
