@@ -1,0 +1,6 @@
+PartitionKey,FileType,ObjectName,HighLevelObject,FileName,LineNumber,LinesOfCode,HighestEWISeverity,ConversionStatus,EWIs,UDFsUsed,CharConversionPercentage,LoCConversionPercentage,EWIsNumber,ObjectDB,DeploymentOrder,CharacterCount
+332fb598-8008-4bf0-bdad-189f92dd9d6b,SQL,5,SELECT,procedure/04-procedures.sql,115,1,,Fully Converted,,,--,100%,0,,,
+332fb598-8008-4bf0-bdad-189f92dd9d6b,BTEQ,12,INSERT,script/06-bteq_sample_1.btq,43,1,,Fully Converted,,,--,100%,0,,,
+332fb598-8008-4bf0-bdad-189f92dd9d6b,BTEQ,13,INSERT,script/06-bteq_sample_1.btq,44,1,,Fully Converted,,,--,100%,0,,,
+332fb598-8008-4bf0-bdad-189f92dd9d6b,BTEQ,14,INSERT,script/06-bteq_sample_1.btq,45,1,,Fully Converted,,,--,100%,0,,,
+332fb598-8008-4bf0-bdad-189f92dd9d6b,BTEQ,17,SELECT,script/06-bteq_sample_1.btq,50,1,,Fully Converted,,,--,100%,0,,,
