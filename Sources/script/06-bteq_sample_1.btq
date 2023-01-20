@@ -1,0 +1,58 @@
+
+-- <company="Mobilize.Net">
+--     Copyright (C) Mobilize.Net info@mobilize.net - All Rights Reserved
+--     This file is part of the Mobilize Frameworks, which is
+--     proprietary and confidential.
+--     NOTICE:  All information contained herein is, and remains
+--     the property of Mobilize.Net Corporation.
+--     The intellectual and technical concepts contained herein are
+--     proprietary to Mobilize.Net Corporation and may be covered
+--     by U.S. Patents, and are protected by trade secret or copyright law.
+--     Dissemination of this information or reproduction of this material
+--     is strictly forbidden unless prior written permission is obtained
+--     from Mobilize.Net Corporation.
+-- </copyright>
+
+-- Error handlers.
+.SET ERRORLEVEL (3807) SEVERITY 0;
+.IF ERRORLEVEL > 0 THEN .GOTO ABEND ;
+
+-- Setup.
+drop table TABLE1;
+drop table TABLE2;
+drop table TABLE3;
+.SET ERRORLEVEL (3807) SEVERITY 8;
+.IF ERRORLEVEL > 0 THEN .GOTO ABEND ;
+
+.SET ERRORLEVEL (3807) SEVERITY 0;
+.IF ERRORLEVEL > 0 THEN .GOTO LABEL_1;
+
+-- Building the table.
+CREATE MULTISET TABLE TABLE1 ,NO FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO
+     (
+         column1 BYTEINT,
+         column2 INTEGER,
+         column3 VARCHAR(10)
+     );
+
+-- Populating the table.
+.LABEL LABEL_1
+INSERT INTO TABLE1 VALUES(1,1,'22');
+INSERT INTO TABLE1 VALUES(2,2,'33');
+INSERT INTO TABLE1 VALUES(3,3,'44');
+
+.IF ERRORLEVEL > 0 THEN .GOTO ABEND;
+
+.LABEL LABEL_2
+SELECT * FROM TABLE1;
+
+-- Finish.
+.LABEL GOODEND
+.QUIT
+
+.LABEL ABEND
+.QUIT ERRORCODE
